@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../lodash/lodash.html">
+
+<polymer-element name="test-component">
+  <template>
+    <style>
+      :host {
+        display: block;
+        font-size: 2em;
+        color: cornflowerBlue;
+      }
+    </style>
+
+    <div id='test_elem' on-tap="{{go}}" fit layout horizontal center center-justified>
+      Click Me!
+    </div>
+
+  </template>
+
+  <script>
+    Polymer({
+      ready: function() {
+        console.log("test-component component ready!");
+      },
+
+      go : function(event, detail, sender) {
+        console.log("Component:" + _.now());
+      }
+    });
+  </script>
+</polymer-element>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Test Page</title>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.6.0/webcomponents.min.js"></script>
+
+      <link rel="import" href="components/lodash/lodash.html">
+
+      <link rel="import" href="components/test-component/test-component.html">
+    </head>
+    <body fullbleed unresolved>
+      <script>
+        window.addEventListener('WebComponentsReady', function(e) {
+          console.log("Web Components Ready!");
+
+          document.body.appendChild(document.createElement("test-component"));
+
+          console.log("Index:" + _.now());
+        });
+      </script>
+    </body>
+    </html>
